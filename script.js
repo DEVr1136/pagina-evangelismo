@@ -428,7 +428,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (elements.finalPilares && fluxo.final.pilares) {
       elements.finalPilares.innerHTML = fluxo.final.pilares.map((p) =>
-        `<div class="pilar-card pilar-expanded" role="button" tabindex="0" aria-expanded="true">
+        `<div class="pilar-card" role="button" tabindex="0" aria-expanded="false">
           <div class="pilar-header">
             <h4 class="pilar-titulo">${p.titulo}</h4>
             <span class="pilar-hint" aria-hidden="true">👆</span>
