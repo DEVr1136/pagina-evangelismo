@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const FLUXO = {
     jovem: {
       sonho: {
-        sonhoIntro: "Seja honesto consigo mesmo. Antes das cobranças — o que o seu coração realmente quer?",
+        sonhoIntro: "Você já teve aquela sensação de que todo mundo sabe o que está fazendo — menos você?\n\nTem dias que a ansiedade chega antes do café. Você abre o celular e já começa a comparação. E uma pergunta que não sai da cabeça: qual é o meu lugar no mundo?\n\nIsso não é fraqueza. É o coração pedindo algo que o mundo ainda não conseguiu te dar.",
         pergunta: "O que você mais deseja nessa fase da sua vida?",
         opcoes: [
           { id: "identidade", label: "Saber quem sou de verdade", description: "Descobrir meu valor além das comparações e das expectativas dos outros." },
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
           identidade: {
             verseRef: "1 Timóteo 4:12",
             verseText: "Ninguém despreze a tua mocidade; pelo contrário, torna-te padrão dos fiéis.",
-            intro: "Antes de qualquer conquista — Jesus já te conhece por dentro. Você não precisa provar nada para ser valioso.",
+            intro: "E se essa sensação de não ser suficiente não fosse a verdade sobre você — mas uma mentira que o mundo te ensinou a acreditar?\n\nJesus não chegou para quem tinha tudo resolvido. Ele escolheu jovens sem certeza, sem currículo. E disse a cada um: eu te escolhi. Não o teu desempenho — você.",
             pergunta: "O que mais te impede de saber quem você é?",
             opcoes: [
               { id: "comparacao", label: "A comparação constante me esgota", description: "Sinto que estou sempre atrás dos outros." },
@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
           futuro: {
             verseRef: "Jeremias 29:11",
             verseText: "Eu é que sei os planos que tenho para vocês, diz o Senhor, planos de paz e não de mal.",
-            intro: "Você não precisa ter o mapa completo. Deus já conhece cada capítulo da sua história — inclusive os que ainda não foram escritos.",
+            intro: "E se a sua incerteza não fosse sinal de fracasso — mas o espaço onde Deus trabalha?\n\nJesus não prometeu um mapa completo. Prometeu uma presença constante. Há quase 2000 anos, ninguém que O seguiu ficou sem direção.",
             pergunta: "O que mais te impede de ter essa clareza?",
             opcoes: [
               { id: "perdido", label: "Me sinto perdido, sem saber o caminho", description: "Vejo todos avançando enquanto eu fico parado." },
@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
           pertencer: {
             verseRef: "Provérbios 13:20",
             verseText: "Quem anda com os sábios será sábio.",
-            intro: "Você foi feito para pertencer — mas ao lugar certo. Jesus conhece exatamente onde você se encaixa.",
+            intro: "Você foi feito para pertencer — mas ao lugar certo. E o mundo raramente oferece conexão de verdade.\n\nJesus criou comunidade com os que se sentiam de fora. Não escolheu os populares. Escolheu os que precisavam de algo real.",
             pergunta: "O que mais dificulta isso?",
             opcoes: [
               { id: "rejeicao", label: "Tenho medo de ser rejeitado", description: "É difícil me mostrar de verdade por medo do julgamento." },
@@ -65,6 +65,11 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       },
       final: {
+        pilares: [
+          { titulo: "Aceitação", texto: "Você não precisa se provar. Em Cristo, você é amado antes de qualquer conquista — e isso não muda." },
+          { titulo: "Propósito", texto: "Você tem um caminho. Deus conhece cada dúvida, cada recomeço. A sua história não é um rascunho." },
+          { titulo: "Relacionamento", texto: "Alguém que te entende de verdade. Jesus vê quem você é por dentro — e ainda assim fica." }
+        ],
         porSonho: {
           identidade: "Você quer saber quem é de verdade — e essa busca não é fraqueza. É o coração pedindo o que só Deus pode dar.",
           futuro: "Você quer um caminho claro — e Deus já está trabalhando nos bastidores da sua história.",
@@ -85,7 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     adulto: {
       sonho: {
-        sonhoIntro: "Tire um momento para ser honesto. Antes das obrigações — o que o seu coração realmente quer?",
+        sonhoIntro: "Você cuida de todo mundo. Mas quem cuida de você?\n\nO trabalho não para. As contas não param. As cobranças não param. E em algum momento silencioso, vem aquela pergunta: é pra isso que eu estou vivendo?\n\nNão é ingratidão. É o coração exausto pedindo mais do que sobrevivência.",
         pergunta: "O que você mais deseja nessa fase da sua vida?",
         opcoes: [
           { id: "leveza", label: "Ter mais leveza e descanso", description: "Sair da correria e sentir que a vida pode ser mais do que sobreviver." },
@@ -98,7 +103,7 @@ document.addEventListener("DOMContentLoaded", () => {
           leveza: {
             verseRef: "Mateus 11:28",
             verseText: "Vinde a mim todos os que estais cansados e sobrecarregados, e eu vos aliviarei.",
-            intro: "Você não foi feito para carregar o mundo. Jesus te convida para um descanso que não é fraqueza — é sabedoria.",
+            intro: "E se o descanso que você precisa não fosse uma recompensa pelo esforço — mas um direito que você já tem?\n\nJesus olhou pra pessoas exatamente onde você está — sobrecarregadas, cansadas por dentro — e disse: vem, eu te alivio. Não como fuga. Como presença que não cobra resultado.",
             pergunta: "O que mais te impede de ter essa leveza?",
             opcoes: [
               { id: "cansaco", label: "O cansaço não vai embora", description: "Durmo e acordo cansado — a mente nunca para." },
@@ -109,7 +114,7 @@ document.addEventListener("DOMContentLoaded", () => {
           proposito: {
             verseRef: "Provérbios 3:5-6",
             verseText: "Confia no Senhor de todo o teu coração e não te estribes no teu próprio entendimento.",
-            intro: "Confiar em Deus não é abandonar seus planos — é abrir espaço para os planos Dele, que são maiores do que os seus.",
+            intro: "E se o vazio que você sente não fosse falta de esforço — mas o coração pedindo algo que vai além da rotina?\n\nJesus não veio pra tornar a vida mais eficiente. Veio pra dar sentido ao que você já vive. Cada gesto de amor que você dá tem peso eterno.",
             pergunta: "O que mais te impede de sentir esse propósito?",
             opcoes: [
               { id: "vazio", label: "Faço muito, mas sinto um vazio por dentro", description: "Conquistas que não preenchem — uma rotina que não tem alma." },
@@ -120,7 +125,7 @@ document.addEventListener("DOMContentLoaded", () => {
           familia_bem: {
             verseRef: "Josué 24:15",
             verseText: "Eu e a minha casa serviremos ao Senhor.",
-            intro: "A família que você deseja começa em você — e Jesus age além do que seus esforços alcançam.",
+            intro: "E se a família que você deseja fosse possível não por mais esforço seu — mas por uma intervenção que vai além?\n\nJesus age além do que seus esforços alcançam. Ele restaura o que parece quebrado demais — e atende orações que seus braços não conseguem alcançar.",
             pergunta: "O que mais pesa nessa área?",
             opcoes: [
               { id: "conflito_fam", label: "Há conflitos que não consigo resolver", description: "Tensões que persistem e distâncias que crescem." },
@@ -131,6 +136,11 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       },
       final: {
+        pilares: [
+          { titulo: "Aceitação", texto: "Você não precisa provar que merece. Em Cristo, você é amado no cansaço, na dívida, no dia em que tudo deu errado." },
+          { titulo: "Propósito", texto: "A sua rotina tem significado eterno. O que você faz com amor — Deus vê. E isso dura mais do que qualquer resultado." },
+          { titulo: "Relacionamento", texto: "Alguém que não depende de você para existir. Jesus cuida de você — sem cobrar resultado, sem te abandonar quando você fracassa." }
+        ],
         porSonho: {
           leveza: "Você quer leveza — e Deus não te criou para arrastar o peso do mundo sozinho.",
           proposito: "Você quer sentir que sua vida importa — e ela importa muito mais do que você imagina.",
@@ -151,7 +161,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     melhor_idade: {
       sonho: {
-        sonhoIntro: "Olhe para o fundo do coração. O que ainda pulsa lá dentro — o que você ainda espera?",
+        sonhoIntro: "A sua história não acabou. Mas às vezes o silêncio pesa.\n\nVocê olha para uma vida inteira vivida — e uma pergunta que ninguém fala em voz alta aparece: ainda tenho valor? Ainda importo?\n\nEssas perguntas não são sinal de fraqueza. São sinal de que o seu coração ainda pulsa com força.",
         pergunta: "O que você mais deseja nessa fase da sua vida?",
         opcoes: [
           { id: "paz_profunda", label: "Ter paz de verdade no coração", description: "Uma tranquilidade que não depende das circunstâncias." },
@@ -164,7 +174,7 @@ document.addEventListener("DOMContentLoaded", () => {
           paz_profunda: {
             verseRef: "Filipenses 4:7",
             verseText: "A paz de Deus, que excede todo o entendimento, guardará os vossos corações.",
-            intro: "A paz que Jesus oferece não depende de como estão as circunstâncias — ela guarda o coração de dentro pra fora.",
+            intro: "E se a paz que você busca não dependesse de como estão as circunstâncias — mas de Uma Presença que não muda?\n\nJesus prometeu uma paz que excede todo entendimento — não a ausência de dificuldades, mas uma serenidade que guarda o coração de dentro pra fora.",
             pergunta: "O que mais rouba essa paz do seu coração?",
             opcoes: [
               { id: "saude", label: "A preocupação com a saúde não me larga", description: "O corpo muda e o medo do que vem pela frente é constante." },
@@ -175,7 +185,7 @@ document.addEventListener("DOMContentLoaded", () => {
           legado: {
             verseRef: "Salmos 92:14",
             verseText: "Na velhice darão ainda frutos, serão cheios de seiva e de verdor.",
-            intro: "Sua história não acabou. Cada estação da vida tem um propósito — e Deus ainda tem muito para escrever com você.",
+            intro: "E se a sua história não tivesse terminado — mas estivesse no capítulo mais importante?\n\nDeus não descarta quem viveu muito. Usa exatamente a experiência, a fé e a sabedoria que só o tempo constrói. Sua vida ainda tem páginas pra ser escritas.",
             pergunta: "O que mais pesa quando você pensa nisso?",
             opcoes: [
               { id: "invisivel", label: "Me sinto invisível para quem está ao redor", description: "A sensação de que o mundo passou e me deixou pra trás." },
@@ -186,7 +196,7 @@ document.addEventListener("DOMContentLoaded", () => {
           presenca: {
             verseRef: "Isaías 46:4",
             verseText: "Até à vossa velhice, eu serei o mesmo e ainda até às cãs eu vos carregarei.",
-            intro: "Até às cãs — Deus prometeu carregar com você. Você nunca esteve sozinho, mesmo quando pareceu assim.",
+            intro: "E se o silêncio que você sente não fosse abandono — mas o espaço onde Deus fala mais claramente?\n\nJesus prometeu: não vos deixarei órfãos. Não é uma promessa distante — é uma presença que esteve com você em cada momento que você pensou que estava sozinho.",
             pergunta: "O que mais pesa nessa solidão?",
             opcoes: [
               { id: "solidao_dura", label: "A solidão dói de um jeito difícil de explicar", description: "O silêncio que grita mais alto do que qualquer barulho." },
@@ -197,6 +207,11 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       },
       final: {
+        pilares: [
+          { titulo: "Aceitação", texto: "Você é precioso exatamente como está. Não pelo que ainda produz — mas porque foi feito por Deus. Isso nunca muda com a idade." },
+          { titulo: "Propósito", texto: "A sua vida ainda tem missão. A experiência que você carrega é um tesouro. Suas orações têm poder. Sua presença tem peso." },
+          { titulo: "Relacionamento", texto: "Alguém que nunca vai embora. Amigos partem. O mundo muda. Mas há Uma Presença que prometeu nunca te abandonar." }
+        ],
         porSonho: {
           paz_profunda: "Você quer paz de verdade — e ela não depende de como estão as circunstâncias. Jesus veio trazer exatamente isso.",
           legado: "Você quer sentir que sua vida fez diferença — e fez. Muito mais do que você consegue ver agora.",
@@ -237,6 +252,7 @@ document.addEventListener("DOMContentLoaded", () => {
     backToBurden: document.getElementById("backToBurden"),
     restartJourney: document.getElementById("restartJourney"),
 
+    finalPilares: document.getElementById("finalPilares"),
     finalIntro: document.getElementById("finalIntro"),
     finalBurden: document.getElementById("finalBurden"),
     finalSupport: document.getElementById("finalSupport"),
@@ -407,6 +423,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const solucao = fluxo.final.porMito[estado.escolhaPasso2];
     const introSonho = fluxo.final.porSonho[estado.escolhaPasso1];
+
+    if (elements.finalPilares && fluxo.final.pilares) {
+      elements.finalPilares.innerHTML = fluxo.final.pilares.map((p) =>
+        `<div class="pilar-card"><h4 class="pilar-titulo">${p.titulo}</h4><p class="pilar-texto">${p.texto}</p></div>`
+      ).join("");
+    }
 
     if (elements.finalIntro) {
       elements.finalIntro.textContent = introSonho || "";
