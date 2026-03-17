@@ -241,7 +241,7 @@ document.addEventListener("DOMContentLoaded", () => {
     progressAffirmation: document.getElementById("progressAffirmation"),
 
     burdenSectionTitle: document.getElementById("burdenQuestion"),
-    burdenIntro: document.getElementById("burdenIntro"),
+    burdenBanner: document.getElementById("burdenBanner"),
     burdenOptions: document.getElementById("burdenOptions"),
 
     supportSectionTitle: document.getElementById("supportQuestion"),
@@ -374,8 +374,10 @@ document.addEventListener("DOMContentLoaded", () => {
     if (elements.burdenSectionTitle) {
       elements.burdenSectionTitle.textContent = fluxo.sonho.pergunta;
     }
-    if (elements.burdenIntro) {
-      elements.burdenIntro.textContent = fluxo.sonho.sonhoIntro;
+    if (elements.burdenBanner) {
+      const imgMap = { jovem: "jovem.png", adulto: "adulto.png", melhor_idade: "melhor%20idade.png" };
+      elements.burdenBanner.src = imgMap[estado.perfilSelecionado] || "";
+      elements.burdenBanner.alt = fluxo.sonho.pergunta;
     }
 
     renderizarOpcoes(

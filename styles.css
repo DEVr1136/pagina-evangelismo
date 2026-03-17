@@ -152,6 +152,14 @@ body {
   margin-bottom: 12px;
 }
 
+.burden-banner {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  display: block;
+  object-fit: cover;
+}
+
 .verse-block {
   display: block;
   background: #f0f8f3;
