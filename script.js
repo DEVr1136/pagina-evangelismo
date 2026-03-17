@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
         opcoes: [
           {
             id: "pressao_expectativas",
-            label: "Pressão e expectativas",
+            label: "Expectativas",
             description: "Cobranças, comparações e sensação de nunca ser suficiente."
           },
           {
@@ -227,6 +227,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const elements = {
     stepSections: document.querySelectorAll(".step"),
     profileCards: document.querySelectorAll(".profile-card"),
+    hero: document.querySelector(".hero"),
     progressFill: document.getElementById("progressFill"),
     progressLabel: document.getElementById("progressLabel"),
     progressAffirmation: document.getElementById("progressAffirmation"),
@@ -286,10 +287,13 @@ document.addEventListener("DOMContentLoaded", () => {
     if (elements.progressAffirmation) {
       elements.progressAffirmation.classList.toggle("hidden", stepId !== "welcome");
     }
+    if (elements.hero) {
+      elements.hero.classList.toggle("hidden", stepId !== "welcome");
+    }
   }
 
   function formatarVersiculo(ref, texto, intro) {
-    return `<strong>${ref}</strong> - "${texto}"<br>${intro}`;
+    return `<span class="verse-block"><em class="verse-ref">${ref}</em><span class="verse-text">"${texto}"</span></span><span class="verse-intro">${intro}</span>`;
   }
 
   function criarCardOpcao(opcao, onClick, selectedId) {
