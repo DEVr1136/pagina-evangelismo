@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const FLUXO = {
     jovem: {
       sonho: {
-        sonhoIntro: "Você já teve aquela sensação de que todo mundo sabe o que está fazendo — menos você?\n\nTem dias que a ansiedade chega antes do café. Você abre o celular e já começa a comparação. E uma pergunta que não sai da cabeça: qual é o meu lugar no mundo?\n\nIsso não é fraqueza. É o coração pedindo algo que o mundo ainda não conseguiu te dar.",
+        sonhoIntro: "Você já sentiu que ninguém te entende?",
         pergunta: "O que você mais deseja nessa fase da sua vida?",
         opcoes: [
           { id: "identidade", label: "Saber quem sou de verdade", description: "Descobrir meu valor além das comparações e das expectativas dos outros." },
