@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Esperança em Jesus</title>
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Lora:wght@600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <main class="app-shell">
+
+      <!-- HERO -->
+      <header class="hero">
+        <h1>Você não está aqui por acaso</h1>
+
+      </header>
+
+      <!-- PROGRESSO -->
+      <section class="progress-wrap" aria-label="Progresso da jornada">
+        <div class="progress-track">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+        <p class="progress-label" id="progressLabel">Passo 1 de 4</p>
+        <p class="progress-affirmation" id="progressAffirmation">
+          Deus cuida de você de uma forma especial em cada etapa da sua vida.
+          Qual é a fase que você está vivendo neste momento?
+        </p>
+      </section>
+
+      <!-- PASSO 1: PERFIL -->
+      <section class="step" id="step-welcome" data-step="welcome">
+        <div class="choice-grid">
+
+          <button type="button" class="choice-card profile-card" data-profile="jovem">
+            <span class="choice-title">Jovem</span>
+            <span class="choice-text">
+              Pressões, comparações, cobranças… às vezes parece demais.
+            </span>
+          </button>
+
+          <button type="button" class="choice-card profile-card" data-profile="adulto">
+            <span class="choice-title">Adulto</span>
+            <span class="choice-text">
+              Responsabilidades, correria, expectativas — e um coração pedindo fôlego.
+            </span>
+          </button>
+
+          <button type="button" class="choice-card profile-card" data-profile="melhor_idade">
+            <span class="choice-title">Melhor idade</span>
+            <span class="choice-text">
+              Memórias, mudanças, saudades… e um desejo sincero de paz verdadeira.
+            </span>
+          </button>
+
+        </div>
+      </section>
+
+      <!-- PASSO 2: PESO -->
+      <section class="step hidden" id="step-burden" data-step="burden">
+        <p class="step-note step-context" id="burdenIntro">
+          Pode ser algo que dói faz tempo, algo que te preocupa agora, ou algo que você
+          já não consegue carregar sozinho(a).
+        </p>
+        <h2 class="step-question" id="burdenQuestion">Que peso você sente que Jesus poderia aliviar hoje?</h2>
+
+        <div class="choice-grid" id="burdenOptions"></div>
+
+        <button type="button" class="btn btn-secondary" id="backToProfile">
+          Voltar
+        </button>
+      </section>
+
+      <!-- PASSO 3: CUIDADO -->
+      <section class="step hidden" id="step-support" data-step="support">
+        <p class="step-note step-context" id="supportIntro">
+          Jesus cuida de você de um jeito único. Escolha o cuidado que faz mais sentido
+          para este momento da sua vida.
+        </p>
+        <h2 class="step-question" id="supportQuestion">Do que o seu coração mais precisa neste momento?</h2>
+
+        <div class="choice-grid" id="supportOptions"></div>
+
+        <button type="button" class="btn btn-secondary" id="backToBurden">
+          Voltar
+        </button>
+      </section>
+
+      <!-- PASSO FINAL -->
+      <section class="step hidden" id="step-final" data-step="final">
+        <h2>Jesus te encontra exatamente onde você está</h2>
+
+        <div class="message-stack">
+          <p id="finalIntro">
+            Nada do que você sente hoje passa despercebido por Deus.
+            Ele vê o que ninguém vê e entende aquilo que às vezes você nem consegue explicar.
+          </p>
+
+          <p id="finalBurden"></p>
+          <p id="finalSupport"></p>
+
+          <p id="finalCommunity">
+            O que você sente agora não é coincidência: é cuidado, é convite,
+            é o amor de Jesus chegando até você.
+          </p>
+
+          <p class="verse" id="finalVerse"></p>
+        </div>
+
+        <article class="prayer-box" aria-label="Oração guiada">
+          <h3>Oração guiada</h3>
+          <p id="guidedPrayer">
+            Senhor Jesus, eu entrego a Ti o que eu não consigo carregar sozinho(a).
+            Acalma minha mente, cura o que dói e fortalece o que está fraco.
+            Mostra o caminho certo e caminha comigo a partir de hoje.
+            Eu Te recebo na minha vida. Amém.
+          </p>
+        </article>
+
+        <section class="final-banner-wrap" aria-label="Links da igreja com rolagem">
+          <h3 class="final-banner-title">Somos uma igreja util para a sociedade! </h3>
+          <div class="final-banner-scroll-wrap">
+            <div class="final-banner-scroll">
+              <img class="final-banner-image" src="jiu-jitsu.png"             alt="Projeto social Renovo - aulas de Jiu-Jitsu"            loading="lazy" />
+              <img class="final-banner-image" src="alfabetiza%C3%A7%C3%A3o.png" alt="Projeto de alfabetizacao para jovens e adultos"   loading="lazy" />
+              <img class="final-banner-image" src="bale.png"                  alt="Projeto Ballet Renovo com aulas gratuitas"           loading="lazy" />
+              <img class="final-banner-image" src="miss%C3%A3o.jpg"           alt="Nossa Missão - Igreja Batista Renovo"                loading="lazy" />
+              <img class="final-banner-image" src="vis%C3%A3o.jpg"            alt="Nossa Visão - Igreja Batista Renovo"                 loading="lazy" />
+              <img class="final-banner-image" src="compromisso.jpg"           alt="Nossos Compromissos - Igreja Batista Renovo"         loading="lazy" />
+            </div>
+          </div>
+        </section>
+
+        <div class="cta-column">
+          <a class="btn btn-whatsapp btn-equal"
+             href="https://wa.me/5592991217711?text=Ol%C3%A1!%20Acessei%20a%20p%C3%A1gina%20e%20gostaria%20de%20conhecer%20mais%20a%20Igreja%20Batista%20Renovo."
+             target="_blank"
+             rel="noreferrer">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20" style="margin-right:8px;flex-shrink:0" aria-hidden="true">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+              <path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.528 5.855L0 24l6.335-1.505A11.943 11.943 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.368l-.36-.214-3.732.886.939-3.618-.234-.372A9.818 9.818 0 1112 21.818z"/>
+            </svg>
+            Falar com a Igreja no WhatsApp
+          </a>
+          <a class="btn btn-primary btn-equal"
+             id="ctaVisit"
+             href="https://www.instagram.com/renovomanaus?igsh=MmhmaDRhMWgzZGI="
+             target="_blank"
+             rel="noreferrer">
+            Conheça mais sobre nós
+          </a>
+        </div>
+
+        <button type="button" class="btn btn-secondary" id="restartJourney">
+          Refazer jornada
+        </button>
+      </section>
+
+      <footer class="footer-note">
+        <p>
+          Esta é uma mensagem preparada com carinho pela
+          <strong>Igreja Batista Renovo</strong>.
+        </p>
+      </footer>
+
+    </main>
+  </body>
+</html>
