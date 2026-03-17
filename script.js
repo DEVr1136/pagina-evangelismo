@@ -16,210 +16,203 @@ document.addEventListener("DOMContentLoaded", () => {
     final: "final"
   };
 
-  const OPCOES_CUIDADO_PADRAO = [
-    {
-      id: "paz",
-      label: "Paz de verdade",
-      description: "Não a ausência de problemas — mas um coração que descansa mesmo no meio deles."
-    },
-    {
-      id: "direcao",
-      label: "Um caminho claro",
-      description: "Saber o próximo passo — mesmo quando tudo parece confuso."
-    },
-    {
-      id: "forca",
-      label: "Força pra seguir",
-      description: "Não desistir — mesmo quando a vontade é parar."
-    }
-  ];
-
   const FLUXO = {
     jovem: {
-      passo1: {
-        verseRef: "1 Timóteo 4:12",
-        verseText:
-          "Ninguém despreze a tua mocidade; pelo contrário, torna-te padrão dos fiéis.",
-        intro:
-          "Você já é alguém. Antes de qualquer conquista, Jesus te vê com propósito — e a sua fase de vida importa para Ele.",
-        pergunta: "Diz pra mim — o que mais rouba sua paz nessa fase?",
+      sonho: {
+        sonhoIntro: "Seja honesto consigo mesmo. Antes das cobranças — o que o seu coração realmente quer?",
+        pergunta: "O que você mais deseja nessa fase da sua vida?",
         opcoes: [
-          {
-            id: "pressao_expectativas",
-            label: "Expectativas",
-            description: "A sensação de que todo mundo chegou lá... menos você."
-          },
-          {
-            id: "duvidas_futuro",
-            label: "Não saber o caminho",
-            description: "A angústia de ainda não saber quem você vai ser ou onde vai chegar."
-          },
-          {
-            id: "influencias_amizades",
-            label: "Pertencer sem se perder",
-            description: "Querer ser aceito sem abrir mão de quem você realmente é."
-          }
+          { id: "identidade", label: "Saber quem sou de verdade", description: "Descobrir meu valor além das comparações e das expectativas dos outros." },
+          { id: "futuro", label: "Ter clareza sobre o meu futuro", description: "Saber para onde ir quando tudo ao redor parece incerto." },
+          { id: "pertencer", label: "Me sentir parte de algo real", description: "Ter conexões verdadeiras onde posso ser eu mesmo." }
         ]
       },
-      passo2: {
-        pergunta: "Se Jesus pudesse te dar uma coisa hoje — qual você escolheria?",
-        opcoes: OPCOES_CUIDADO_PADRAO,
-        porEscolha: {
-          pressao_expectativas: {
-            verseRef: "Mateus 11:28",
-            verseText:
-              "Vinde a mim todos os que estais cansados e sobrecarregados, e eu vos aliviarei.",
-            intro:
-              "A pressão que você sente hoje não é a voz de Deus. Em Jesus, você não precisa provar nada — você já tem valor."
+      mito: {
+        porSonho: {
+          identidade: {
+            verseRef: "1 Timóteo 4:12",
+            verseText: "Ninguém despreze a tua mocidade; pelo contrário, torna-te padrão dos fiéis.",
+            intro: "Antes de qualquer conquista — Jesus já te conhece por dentro. Você não precisa provar nada para ser valioso.",
+            pergunta: "O que mais te impede de saber quem você é?",
+            opcoes: [
+              { id: "comparacao", label: "A comparação constante me esgota", description: "Sinto que estou sempre atrás dos outros." },
+              { id: "expectativas", label: "Vivo tentando agradar a todos", description: "A pressão de não decepcionar ninguém — menos eu mesmo." },
+              { id: "nao_sei_quem_sou", label: "Não sei quem sou fora do que fazem de mim", description: "Perdi o fio de quem realmente sou no meio de tanta cobrança." }
+            ]
           },
-          duvidas_futuro: {
+          futuro: {
             verseRef: "Jeremias 29:11",
-            verseText:
-              "Eu é que sei os planos que tenho para vocês, diz o Senhor, planos de paz e não de mal.",
-            intro:
-              "Você não precisa ter tudo resolvido para Deus agir. Ele já conhece cada capítulo da sua história — inclusive os que ainda não foram escritos."
+            verseText: "Eu é que sei os planos que tenho para vocês, diz o Senhor, planos de paz e não de mal.",
+            intro: "Você não precisa ter o mapa completo. Deus já conhece cada capítulo da sua história — inclusive os que ainda não foram escritos.",
+            pergunta: "O que mais te impede de ter essa clareza?",
+            opcoes: [
+              { id: "perdido", label: "Me sinto perdido, sem saber o caminho", description: "Vejo todos avançando enquanto eu fico parado." },
+              { id: "medo_errar", label: "Tenho medo de errar e não ter volta", description: "A incerteza que paralisa mais do que qualquer obstáculo." },
+              { id: "pressao_decidir", label: "Sinto pressão para decidir antes de estar pronto", description: "A cobrança de já ter tudo planejado enquanto ainda estou descobrindo." }
+            ]
           },
-          influencias_amizades: {
+          pertencer: {
             verseRef: "Provérbios 13:20",
             verseText: "Quem anda com os sábios será sábio.",
-            intro:
-              "Você foi feito para pertencer — mas ao lugar certo. Jesus quer te dar sabedoria para escolher quem caminha com você."
+            intro: "Você foi feito para pertencer — mas ao lugar certo. Jesus conhece exatamente onde você se encaixa.",
+            pergunta: "O que mais dificulta isso?",
+            opcoes: [
+              { id: "rejeicao", label: "Tenho medo de ser rejeitado", description: "É difícil me mostrar de verdade por medo do julgamento." },
+              { id: "sozinho", label: "Me sinto sozinho mesmo rodeado de gente", description: "Tenho contatos, mas poucas conexões reais." },
+              { id: "influencia_ruim", label: "As amizades que tenho me puxam pra baixo", description: "Fico preso em um círculo que não me ajuda a crescer." }
+            ]
           }
         }
       },
       final: {
-        resumoFinal:
-          "Você não chegou até aqui à toa. Jesus te viu antes de você O conhecer — e hoje Ele te chama pelo nome.",
-        verseRef: "Romanos 15:13",
-        verseText:
-          "O Deus da esperança vos encha de todo o gozo e paz no vosso crer.",
-        oracao:
-          "Jesus, eu não tenho todas as respostas — mas escolho Te dar meu coração hoje. Guarda quem eu estou me tornando. Firma meus passos no Teu caminho. Amém."
+        porSonho: {
+          identidade: "Você quer saber quem é de verdade — e essa busca não é fraqueza. É o coração pedindo o que só Deus pode dar.",
+          futuro: "Você quer um caminho claro — e Deus já está trabalhando nos bastidores da sua história.",
+          pertencer: "Você quer pertencer de verdade — e existe um lugar preparado para você."
+        },
+        porMito: {
+          comparacao: { resumo: "A voz que diz que você está atrás não é a voz de Deus. Em Cristo, você não corre uma corrida contra os outros — você corre a sua.", verseRef: "Romanos 8:37", verseText: "Em todas estas coisas somos mais do que vencedores, por meio daquele que nos amou.", oracao: "Jesus, cala em mim a voz da comparação. Me ensina a me ver com os Teus olhos. Amém." },
+          expectativas: { resumo: "Viver para agradar a todos é uma prisão silenciosa. Jesus te liberta para ser quem Ele criou — e isso é mais do que suficiente.", verseRef: "Gálatas 1:10", verseText: "Se eu ainda agradasse aos homens, não seria servo de Cristo.", oracao: "Jesus, me liberta da necessidade de aprovação. Quero viver para Ti. Amém." },
+          nao_sei_quem_sou: { resumo: "Você não perdeu sua identidade — ela nunca dependeu do que os outros disseram de você. Deus te formou com propósito desde o princípio.", verseRef: "Salmos 139:14", verseText: "Sou maravilhosamente constituído; as tuas obras são admiráveis.", oracao: "Jesus, me mostra quem sou em Ti. Restaura o que o mundo tentou apagar. Amém." },
+          perdido: { resumo: "Você não está perdido para sempre — está num momento de preparação. Deus te guia um passo de cada vez.", verseRef: "Salmos 32:8", verseText: "Eu te instruirei e te ensinarei o caminho que deves seguir; sobre ti fixarei os meus olhos.", oracao: "Jesus, não preciso do mapa completo. Confia em mim um passo. Eu sigo. Amém." },
+          medo_errar: { resumo: "O medo de errar não vem de Deus. Ele não te deu uma vida para você acertar tudo — te deu para caminhar com Ele.", verseRef: "Isaías 41:10", verseText: "Não temas, porque eu sou contigo; não te assombres, porque eu sou o teu Deus.", oracao: "Jesus, eu entrego meu medo de errar. Quero caminhar com fé, não com perfeição. Amém." },
+          pressao_decidir: { resumo: "Você não precisa ter tudo resolvido agora. Deus te dá o tempo certo — e nenhum capítulo da sua história chega atrasado.", verseRef: "Mateus 6:34", verseText: "Não vos inquieteis com o dia de amanhã; o dia de amanhã cuidará de si mesmo.", oracao: "Jesus, solto a pressão do tempo. Confio no Teu ritmo para minha vida. Amém." },
+          rejeicao: { resumo: "Antes de qualquer pessoa te escolher — Jesus já te escolheu. A rejeição humana nunca cancela a aceitação de Deus.", verseRef: "João 15:16", verseText: "Não fostes vós que me escolhestes a mim; pelo contrário, eu vos escolhi a vós.", oracao: "Jesus, Tu me escolheste antes de qualquer um. Isso é suficiente para mim. Amém." },
+          sozinho: { resumo: "A solidão mente quando diz que ninguém te entende. Jesus prometeu não te deixar só — e há uma comunidade esperando por você.", verseRef: "João 14:18", verseText: "Não vos deixarei órfãos; virei a vós.", oracao: "Jesus, entra na minha solidão. Me conecta com pessoas reais que caminhem comigo. Amém." },
+          influencia_ruim: { resumo: "As amizades que você escolhe moldam quem você está se tornando. Jesus quer te cercar de pessoas que te elevem.", verseRef: "1 Coríntios 15:33", verseText: "As más conversações corrompem os bons costumes.", oracao: "Jesus, me dá sabedoria para escolher meu círculo — e me faz ser a amizade que outros precisam. Amém." }
+        }
       }
     },
     adulto: {
-      passo1: {
-        verseRef: "Provérbios 3:5-6",
-        verseText:
-          "Confia no Senhor de todo o teu coração e não te estribes no teu próprio entendimento.",
-        intro:
-          "A vida adulta cobra demais e explica de menos. Mas existe alguém que carrega com você — e que nunca saiu do seu lado.",
-        pergunta: "O que tem pesado demais para você carregar sozinho?",
+      sonho: {
+        sonhoIntro: "Tire um momento para ser honesto. Antes das obrigações — o que o seu coração realmente quer?",
+        pergunta: "O que você mais deseja nessa fase da sua vida?",
         opcoes: [
-          {
-            id: "cansaco_responsabilidades",
-            label: "Cansaço e sobrecarga",
-            description: "A sensação de estar sempre devendo algo a alguém — e nunca tendo energia suficiente."
-          },
-          {
-            id: "preocupacao_financeira",
-            label: "Incerteza financeira",
-            description: "A pressão de não saber se vai dar conta das contas e do futuro."
-          },
-          {
-            id: "familia_relacionamentos",
-            label: "Tensão em casa",
-            description: "Conflitos que cansam, silêncios que doem e distâncias que crescem."
-          }
+          { id: "leveza", label: "Ter mais leveza e descanso", description: "Sair da correria e sentir que a vida pode ser mais do que sobreviver." },
+          { id: "proposito", label: "Sentir que o que faço tem sentido", description: "Ir além da rotina e reconectar com o propósito de estar aqui." },
+          { id: "familia_bem", label: "Ver minha família bem e unida", description: "Restaurar o que está quebrado e proteger o que ainda está de pé." }
         ]
       },
-      passo2: {
-        pergunta: "Se Jesus pudesse te dar uma coisa hoje — qual você escolheria?",
-        opcoes: OPCOES_CUIDADO_PADRAO,
-        porEscolha: {
-          cansaco_responsabilidades: {
+      mito: {
+        porSonho: {
+          leveza: {
             verseRef: "Mateus 11:28",
-            verseText:
-              "Vinde a mim todos os que estais cansados e sobrecarregados, e eu vos aliviarei.",
-            intro:
-              "Você não foi feito para carregar o mundo. Jesus te chama para um descanso que não é fraqueza — é sabedoria."
+            verseText: "Vinde a mim todos os que estais cansados e sobrecarregados, e eu vos aliviarei.",
+            intro: "Você não foi feito para carregar o mundo. Jesus te convida para um descanso que não é fraqueza — é sabedoria.",
+            pergunta: "O que mais te impede de ter essa leveza?",
+            opcoes: [
+              { id: "cansaco", label: "O cansaço não vai embora", description: "Durmo e acordo cansado — a mente nunca para." },
+              { id: "culpa_parar", label: "Me sinto culpado por precisar parar", description: "A sensação de que descansar é perder tempo." },
+              { id: "sobrecarga", label: "Tenho responsabilidade demais para uma pessoa só", description: "O peso de cuidar de tudo e de todos sem ninguém cuidar de mim." }
+            ]
           },
-          preocupacao_financeira: {
-            verseRef: "Mateus 6:33",
-            verseText:
-              "Buscai, pois, em primeiro lugar, o seu reino e a sua justiça, e todas estas coisas vos serão acrescentadas.",
-            intro:
-              "Deus vê a pressão que você sente com o dinheiro. Ele não ignora o concreto — e quer te dar direção para cada decisão."
+          proposito: {
+            verseRef: "Provérbios 3:5-6",
+            verseText: "Confia no Senhor de todo o teu coração e não te estribes no teu próprio entendimento.",
+            intro: "Confiar em Deus não é abandonar seus planos — é abrir espaço para os planos Dele, que são maiores do que os seus.",
+            pergunta: "O que mais te impede de sentir esse propósito?",
+            opcoes: [
+              { id: "vazio", label: "Faço muito, mas sinto um vazio por dentro", description: "Conquistas que não preenchem — uma rotina que não tem alma." },
+              { id: "financeiro", label: "A pressão financeira me impede de pensar além", description: "Fica difícil pensar em propósito quando as contas estão em jogo." },
+              { id: "perdeu_direcao", label: "Perdi a direção de para onde estou indo", description: "Sinto que estou em um círculo sem saber o destino." }
+            ]
           },
-          familia_relacionamentos: {
-            verseRef: "Colossenses 3:13",
-            verseText:
-              "Assim como o Senhor vos perdoou, assim também perdoai vós.",
-            intro:
-              "O amor que restaura vidas não começa nos sentimentos — começa em Jesus. E Ele pode transformar o que parece sem saída na sua família."
+          familia_bem: {
+            verseRef: "Josué 24:15",
+            verseText: "Eu e a minha casa serviremos ao Senhor.",
+            intro: "A família que você deseja começa em você — e Jesus age além do que seus esforços alcançam.",
+            pergunta: "O que mais pesa nessa área?",
+            opcoes: [
+              { id: "conflito_fam", label: "Há conflitos que não consigo resolver", description: "Tensões que persistem e distâncias que crescem." },
+              { id: "distancia_fam", label: "Sinto que estamos distantes uns dos outros", description: "Moramos juntos, mas cada um vive no seu mundo." },
+              { id: "medo_filhos", label: "Tenho medo pelo futuro dos meus filhos", description: "A ansiedade de não saber se vão estar bem." }
+            ]
           }
         }
       },
       final: {
-        resumoFinal:
-          "Você tem carregado muito. Hoje, Jesus te convida a soltar o peso que não era pra ser seu — e seguir com Ele.",
-        verseRef: "Salmos 55:22",
-        verseText:
-          "Lança o teu cuidado sobre o Senhor, e ele te susterá.",
-        oracao:
-          "Jesus, eu estou cansado(a) de tentar sozinho(a). Hoje eu Te entrego o que está pesado. Dá-me sabedoria para o que é meu — e coragem para soltar o que não é. Amém."
+        porSonho: {
+          leveza: "Você quer leveza — e Deus não te criou para arrastar o peso do mundo sozinho.",
+          proposito: "Você quer sentir que sua vida importa — e ela importa muito mais do que você imagina.",
+          familia_bem: "Você quer ver sua família bem — e suas orações chegam mais longe do que seus braços alcançam."
+        },
+        porMito: {
+          cansaco: { resumo: "Deus não quer que você continue nesse ritmo. Ele tem um descanso real para você — não como fuga, mas como restauração.", verseRef: "Salmos 23:2-3", verseText: "Ele me faz repousar em pastos verdejantes... restaura a minha alma.", oracao: "Jesus, restaura o que o cansaço consumiu. Dá-me descanso de verdade — de mente, corpo e alma. Amém." },
+          culpa_parar: { resumo: "Parar não é fraqueza. Até Jesus descansou. Cuidar de si mesmo é também honrar a Deus.", verseRef: "Marcos 6:31", verseText: "Vinde vós mesmos a um lugar deserto e descansai um pouco.", oracao: "Jesus, me liberta da culpa de precisar parar. Ensina-me a descansar sem condenação. Amém." },
+          sobrecarga: { resumo: "Você não foi feito para carregar tudo sozinho. Em Jesus há alívio real — e há uma comunidade ao seu redor que pode caminhar com você.", verseRef: "Mateus 11:28", verseText: "Vinde a mim todos os que estais cansados e sobrecarregados, e eu vos aliviarei.", oracao: "Jesus, solto o que não era meu para carregar. Ensina-me a pedir ajuda sem vergonha. Amém." },
+          vazio: { resumo: "O vazio que você sente não é defeito — é evidência de que você foi feito para algo que vai além do que este mundo oferece.", verseRef: "Eclesiastes 3:11", verseText: "Ele pôs a eternidade no coração do homem.", oracao: "Jesus, preenche o que o sucesso não conseguiu. Quero uma vida que faça sentido de verdade. Amém." },
+          financeiro: { resumo: "Deus vê a pressão real das suas contas. Ele não ignora o concreto — e quer fazer parte das suas decisões financeiras.", verseRef: "Mateus 6:33", verseText: "Buscai primeiro o seu reino e a sua justiça, e todas estas coisas vos serão acrescentadas.", oracao: "Jesus, entra nas minhas finanças. Dá-me sabedoria, provisão e paz. Amém." },
+          perdeu_direcao: { resumo: "Você não está perdido para sempre — está num momento de recalibração. Deus te guia quando você pede direção com sinceridade.", verseRef: "Salmos 32:8", verseText: "Eu te instruirei e te ensinarei o caminho que deves seguir.", oracao: "Jesus, mostra-me o próximo passo com clareza. Confio que Tu sabes o caminho. Amém." },
+          conflito_fam: { resumo: "O perdão não é concordar com o erro — é escolher não deixar o passado destruir o presente. Jesus pode restaurar o que parece quebrado demais.", verseRef: "Colossenses 3:13", verseText: "Assim como o Senhor vos perdoou, assim também perdoai vós.", oracao: "Jesus, cura o que está partido na minha família. Dá-me humildade para agir com amor. Amém." },
+          distancia_fam: { resumo: "A distância entre as pessoas raramente é de quilômetros. Jesus pode reconstruir pontes onde a rotina criou muros.", verseRef: "Efésios 4:2", verseText: "Suportai-vos uns aos outros em amor, procurando guardar a unidade do Espírito.", oracao: "Jesus, me ajuda a me aproximar de quem amo. Com paciência, com presença, com amor. Amém." },
+          medo_filhos: { resumo: "O cuidado que você coloca nos seus filhos não é em vão. Deus vê cada ato de amor — e age além do que seus olhos alcançam.", verseRef: "Provérbios 22:6", verseText: "Instrui o menino no caminho em que deve andar; e até quando envelhecer não se desviará dele.", oracao: "Jesus, cuida dos meus filhos quando eu não puder estar lá. Guia-os pelo Teu caminho. Amém." }
+        }
       }
     },
     melhor_idade: {
-      passo1: {
-        verseRef: "Isaías 46:4",
-        verseText:
-          "Até à vossa velhice, eu serei o mesmo e ainda até às cãs eu vos carregarei.",
-        intro:
-          "A sua história não acabou. Cada estação da vida tem um propósito — e Deus ainda tem muito para escrever com você.",
-        pergunta: "O que mais tem ocupado o seu coração nesse tempo da vida?",
+      sonho: {
+        sonhoIntro: "Olhe para o fundo do coração. O que ainda pulsa lá dentro — o que você ainda espera?",
+        pergunta: "O que você mais deseja nessa fase da sua vida?",
         opcoes: [
-          {
-            id: "saude",
-            label: "Saúde e limitações",
-            description: "A dor de sentir o corpo mudar e o medo do que vem pela frente."
-          },
-          {
-            id: "solidao_saudades",
-            label: "Solidão e memórias",
-            description: "A saudade de quem já não está — e o silêncio que dói mais do que parece."
-          },
-          {
-            id: "preocupacao_familia",
-            label: "Preocupação com a família",
-            description: "O desejo de que seus filhos e netos estejam bem — mesmo que você não possa controlar tudo."
-          }
+          { id: "paz_profunda", label: "Ter paz de verdade no coração", description: "Uma tranquilidade que não depende das circunstâncias." },
+          { id: "legado", label: "Sentir que minha vida fez diferença", description: "Que o que construí e vivi não foi em vão." },
+          { id: "presenca", label: "Não estar sozinho", description: "Ter presença real, conexão e sentir que ainda sou visto e amado." }
         ]
       },
-      passo2: {
-        pergunta: "Se Jesus pudesse te dar uma coisa hoje — qual você escolheria?",
-        opcoes: OPCOES_CUIDADO_PADRAO,
-        porEscolha: {
-          saude: {
-            verseRef: "Salmos 41:3",
-            verseText:
-              "O Senhor o assiste no leito da enfermidade.",
-            intro:
-              "Deus não desvia o olhar da sua dor. Cada limitação que você sente — Ele já está lá, do seu lado."
+      mito: {
+        porSonho: {
+          paz_profunda: {
+            verseRef: "Filipenses 4:7",
+            verseText: "A paz de Deus, que excede todo o entendimento, guardará os vossos corações.",
+            intro: "A paz que Jesus oferece não depende de como estão as circunstâncias — ela guarda o coração de dentro pra fora.",
+            pergunta: "O que mais rouba essa paz do seu coração?",
+            opcoes: [
+              { id: "saude", label: "A preocupação com a saúde não me larga", description: "O corpo muda e o medo do que vem pela frente é constante." },
+              { id: "arrependimento", label: "Tenho coisas do passado que ainda pesam", description: "Memórias e escolhas que aparecem no silêncio." },
+              { id: "medo_fim", label: "O pensamento sobre a morte me traz angústia", description: "A incerteza sobre o que vem depois traz um peso difícil de carregar." }
+            ]
           },
-          solidao_saudades: {
-            verseRef: "Deuteronômio 31:8",
-            verseText:
-              "O Senhor é quem vai adiante de ti; não te deixará, nem te desamparará.",
-            intro:
-              "A solidão mente quando diz que você está esquecido. Deus lembra de você com ternura — e nunca te abandonou."
+          legado: {
+            verseRef: "Salmos 92:14",
+            verseText: "Na velhice darão ainda frutos, serão cheios de seiva e de verdor.",
+            intro: "Sua história não acabou. Cada estação da vida tem um propósito — e Deus ainda tem muito para escrever com você.",
+            pergunta: "O que mais pesa quando você pensa nisso?",
+            opcoes: [
+              { id: "invisivel", label: "Me sinto invisível para quem está ao redor", description: "A sensação de que o mundo passou e me deixou pra trás." },
+              { id: "familia_longe", label: "Minha família está distante ou desunida", description: "A dor de ver quem você ama afastado — de você ou de Deus." },
+              { id: "sem_mais_proposito", label: "Sinto que já não tenho mais nada a oferecer", description: "A voz que diz que seu tempo de contribuir já passou." }
+            ]
           },
-          preocupacao_familia: {
-            verseRef: "Josué 24:15",
-            verseText: "Eu e a minha casa serviremos ao Senhor.",
-            intro:
-              "As suas orações por quem você ama chegam mais longe do que seus braços alcançam. Deus ouve — e age."
+          presenca: {
+            verseRef: "Isaías 46:4",
+            verseText: "Até à vossa velhice, eu serei o mesmo e ainda até às cãs eu vos carregarei.",
+            intro: "Até às cãs — Deus prometeu carregar com você. Você nunca esteve sozinho, mesmo quando pareceu assim.",
+            pergunta: "O que mais pesa nessa solidão?",
+            opcoes: [
+              { id: "solidao_dura", label: "A solidão dói de um jeito difícil de explicar", description: "O silêncio que grita mais alto do que qualquer barulho." },
+              { id: "saudade_ausente", label: "A saudade de quem já não está mais", description: "A ausência de pessoas amadas que deixou um espaço que ninguém preenche." },
+              { id: "sem_comunidade", label: "Não tenho pessoas com quem compartilhar a vida", description: "Falta alguém pra ouvir, pra caminhar junto, pra estar presente." }
+            ]
           }
         }
       },
       final: {
-        resumoFinal:
-          "Você não chegou até aqui por acidente. Jesus caminhou com você até aqui — e não vai parar agora.",
-        verseRef: "Salmos 92:14",
-        verseText:
-          "Na velhice darão ainda frutos, serão cheios de seiva e de verdor.",
-        oracao:
-          "Jesus, a minha vida está nas Tuas mãos — e isso é o melhor lugar que ela poderia estar. Sustenta meu coração com paz e renova a minha esperança a cada manhã. Amém."
+        porSonho: {
+          paz_profunda: "Você quer paz de verdade — e ela não depende de como estão as circunstâncias. Jesus veio trazer exatamente isso.",
+          legado: "Você quer sentir que sua vida fez diferença — e fez. Muito mais do que você consegue ver agora.",
+          presenca: "Você não quer estar sozinho — e Deus nunca planejou que você estivesse."
+        },
+        porMito: {
+          saude: { resumo: "Deus não desvia o olhar da sua dor. Cada limitação que você sente — Ele já está lá, do seu lado, com compaixão.", verseRef: "Salmos 41:3", verseText: "O Senhor o assiste no leito da enfermidade.", oracao: "Jesus, entrego meu corpo e minha saúde nas Tuas mãos. Confio que Tu és o meu cuidador. Amém." },
+          arrependimento: { resumo: "O passado não tem poder sobre quem foi perdoado. Jesus carregou tudo isso na cruz — inclusive o que ainda pesa em você.", verseRef: "1 João 1:9", verseText: "Se confessarmos os nossos pecados, ele é fiel e justo para nos perdoar os pecados.", oracao: "Jesus, eu recebo Teu perdão hoje. Me liberta do que ficou preso no passado. Amém." },
+          medo_fim: { resumo: "Em Jesus, a morte não é o fim — é uma passagem. E Ele já foi à frente para preparar o que vem depois.", verseRef: "João 11:25", verseText: "Eu sou a ressurreição e a vida; quem crê em mim, ainda que esteja morto, viverá.", oracao: "Jesus, retiro meu medo diante de Ti. Confio que estou nas Tuas mãos — agora e para sempre. Amém." },
+          invisivel: { resumo: "Aos olhos de Deus, você é precioso. Nenhuma fase da vida diminui o seu valor — ela o revela.", verseRef: "Isaías 43:4", verseText: "Porque és precioso aos meus olhos, és glorioso, e eu te amo.", oracao: "Jesus, me mostra que ainda sou visto e amado por Ti. Renova meu senso de propósito. Amém." },
+          familia_longe: { resumo: "Suas orações pela família chegam mais longe do que seus braços alcançam. Deus ouve — e age além do que seus olhos veem.", verseRef: "Josué 24:15", verseText: "Eu e a minha casa serviremos ao Senhor.", oracao: "Jesus, cuida de quem eu amo. Aproxima quem está longe — de mim e de Ti. Amém." },
+          sem_mais_proposito: { resumo: "Você ainda tem frutos a dar. A experiência que você carrega é preciosa — e Deus ainda tem espaço para ela.", verseRef: "Salmos 92:14", verseText: "Na velhice darão ainda frutos, serão cheios de seiva e de verdor.", oracao: "Jesus, me mostra que ainda tenho algo a oferecer. Usa minha história para o Teu propósito. Amém." },
+          solidao_dura: { resumo: "A solidão mente quando diz que você está esquecido. Deus lembra de você com ternura — e nunca te abandonou.", verseRef: "João 14:18", verseText: "Não vos deixarei órfãos; virei a vós.", oracao: "Jesus, entra na minha solidão. Sê minha companhia e me conecta com quem pode caminhar comigo. Amém." },
+          saudade_ausente: { resumo: "A saudade que você sente é um reflexo do amor que você teve — e esse amor não desaparece. Em Jesus, há esperança que vai além desta vida.", verseRef: "1 Tessalonicenses 4:14", verseText: "Assim também os que dormem em Jesus, Deus os tornará a trazer com ele.", oracao: "Jesus, consola meu coração pela ausência de quem amei. Dá-me paz e a esperança do reencontro. Amém." },
+          sem_comunidade: { resumo: "Você não foi feito para viver a fé sozinho. Há uma comunidade que pode ser sua família — real, presente e que te acolhe.", verseRef: "Hebreus 10:25", verseText: "Não deixando a nossa congregação, como é costume de alguns.", oracao: "Jesus, me conecta com pessoas reais que caminhem comigo. Não quero mais viver só. Amém." }
+        }
       }
     }
   };
@@ -258,10 +251,10 @@ document.addEventListener("DOMContentLoaded", () => {
     return FLUXO[estado.perfilSelecionado] || null;
   }
 
-  function obterConfigPasso2() {
+  function obterConfigMito() {
     const fluxo = obterFluxoPerfil();
     if (!fluxo || !estado.escolhaPasso1) return null;
-    return fluxo.passo2.porEscolha[estado.escolhaPasso1] || null;
+    return fluxo.mito.porSonho[estado.escolhaPasso1] || null;
   }
 
   function obterTextoDaEscolha(opcoes, idEscolhido) {
@@ -363,19 +356,15 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!fluxo) return;
 
     if (elements.burdenSectionTitle) {
-      elements.burdenSectionTitle.textContent = fluxo.passo1.pergunta;
+      elements.burdenSectionTitle.textContent = fluxo.sonho.pergunta;
     }
     if (elements.burdenIntro) {
-      elements.burdenIntro.innerHTML = formatarVersiculo(
-        fluxo.passo1.verseRef,
-        fluxo.passo1.verseText,
-        fluxo.passo1.intro
-      );
+      elements.burdenIntro.textContent = fluxo.sonho.sonhoIntro;
     }
 
     renderizarOpcoes(
       elements.burdenOptions,
-      fluxo.passo1.opcoes,
+      fluxo.sonho.opcoes,
       (opcaoId) => {
         estado.escolhaPasso1 = opcaoId;
         estado.escolhaPasso2 = null;
@@ -387,23 +376,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function renderizarPasso2() {
     const fluxo = obterFluxoPerfil();
-    const configPasso2 = obterConfigPasso2();
-    if (!fluxo || !configPasso2) return;
+    const configMito = obterConfigMito();
+    if (!fluxo || !configMito) return;
 
     if (elements.supportSectionTitle) {
-      elements.supportSectionTitle.textContent = fluxo.passo2.pergunta;
+      elements.supportSectionTitle.textContent = configMito.pergunta;
     }
     if (elements.supportIntro) {
       elements.supportIntro.innerHTML = formatarVersiculo(
-        configPasso2.verseRef,
-        configPasso2.verseText,
-        configPasso2.intro
+        configMito.verseRef,
+        configMito.verseText,
+        configMito.intro
       );
     }
 
     renderizarOpcoes(
       elements.supportOptions,
-      fluxo.passo2.opcoes,
+      configMito.opcoes,
       (opcaoId) => {
         estado.escolhaPasso2 = opcaoId;
         carregarPasso("final");
@@ -414,58 +403,34 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function renderizarFinal() {
     const fluxo = obterFluxoPerfil();
-    const configPasso2 = obterConfigPasso2();
     if (!fluxo) return;
 
-    const pesoEscolhido = obterTextoDaEscolha(fluxo.passo1.opcoes, estado.escolhaPasso1);
-    const cuidadoEscolhido = obterTextoDaEscolha(fluxo.passo2.opcoes, estado.escolhaPasso2);
-
-    const versoFinalRef = configPasso2 ? configPasso2.verseRef : fluxo.final.verseRef;
-    const versoFinalTexto = configPasso2 ? configPasso2.verseText : fluxo.final.verseText;
+    const solucao = fluxo.final.porMito[estado.escolhaPasso2];
+    const introSonho = fluxo.final.porSonho[estado.escolhaPasso1];
 
     if (elements.finalIntro) {
-      elements.finalIntro.textContent = fluxo.final.resumoFinal;
+      elements.finalIntro.textContent = introSonho || "";
     }
 
     if (elements.finalBurden) {
-      elements.finalBurden.textContent = pesoEscolhido
-        ? `Sobre "${pesoEscolhido.toLowerCase()}", Jesus te acolhe sem condenação e cuida de você com amor.`
-        : "Jesus conhece o peso do seu coração e não se afasta de você.";
+      elements.finalBurden.textContent = solucao ? solucao.resumo : "";
     }
 
     if (elements.finalSupport) {
-      elements.finalSupport.textContent = cuidadoEscolhido
-        ? `Ao pedir "${cuidadoEscolhido.toLowerCase()}", você dá um passo de fé: Cristo caminha com você e renova sua esperança.`
-        : "Em Jesus há paz, direção e força para continuar.";
+      elements.finalSupport.textContent = "";
     }
 
     if (elements.finalCommunity) {
-      elements.finalCommunity.textContent = "";
-      elements.finalCommunity.classList.add("hidden");
+      elements.finalCommunity.textContent = "Essa mensagem não chegou até você por acaso. É o amor de Jesus te alcançando — exatamente aqui, exatamente agora.";
+      elements.finalCommunity.classList.remove("hidden");
     }
 
-    if (elements.finalVerse) {
-      elements.finalVerse.textContent = `${versoFinalTexto} (${versoFinalRef})`;
+    if (elements.finalVerse && solucao) {
+      elements.finalVerse.textContent = `"${solucao.verseText}" (${solucao.verseRef})`;
     }
 
-    if (elements.guidedPrayer) {
-      const fase = estado.perfilSelecionado === "melhor_idade"
-        ? "melhor idade"
-        : estado.perfilSelecionado;
-      const pesoFrase = pesoEscolhido ? pesoEscolhido.toLowerCase() : "o peso do meu coração";
-      const cuidadoFrase = cuidadoEscolhido ? cuidadoEscolhido.toLowerCase() : "teu cuidado";
-
-      elements.guidedPrayer.textContent = [
-        `Jesus, eu te entrego esta fase da minha vida (${fase}).`,
-        `Eu te entrego também ${pesoFrase}.`,
-        `Hoje eu te peço ${cuidadoFrase} para seguir em frente.`,
-        "Perdoa meus pecados, fortalece meu coração e guia meus passos.",
-        "Eu reconheço que Tu caminhas comigo e coloco minha esperança em Ti. Amém."
-      ].join(" ");
-    }
-
-    if (elements.ctaVisit && !elements.ctaVisit.getAttribute("href")) {
-      elements.ctaVisit.setAttribute("href", "#");
+    if (elements.guidedPrayer && solucao) {
+      elements.guidedPrayer.textContent = solucao.oracao;
     }
   }
 
