@@ -19,18 +19,18 @@ document.addEventListener("DOMContentLoaded", () => {
   const OPCOES_CUIDADO_PADRAO = [
     {
       id: "paz",
-      label: "Paz no coração",
-      description: "Descanso na mente e serenidade para hoje."
+      label: "Paz de verdade",
+      description: "Não a ausência de problemas — mas um coração que descansa mesmo no meio deles."
     },
     {
       id: "direcao",
-      label: "Direção de Deus",
-      description: "Clareza para os próximos passos."
+      label: "Um caminho claro",
+      description: "Saber o próximo passo — mesmo quando tudo parece confuso."
     },
     {
       id: "forca",
-      label: "Força para continuar",
-      description: "Ânimo para seguir mesmo em dias difíceis."
+      label: "Força pra seguir",
+      description: "Não desistir — mesmo quando a vontade é parar."
     }
   ];
 
@@ -41,28 +41,28 @@ document.addEventListener("DOMContentLoaded", () => {
         verseText:
           "Ninguém despreze a tua mocidade; pelo contrário, torna-te padrão dos fiéis.",
         intro:
-          "Jesus cuida da sua juventude com propósito. Sua fase tem valor e direção em Deus.",
-        pergunta: "O que mais tem pesado no seu coração nessa fase da juventude?",
+          "Você já é alguém. Antes de qualquer conquista, Jesus te vê com propósito — e a sua fase de vida importa para Ele.",
+        pergunta: "Diz pra mim — o que mais rouba sua paz nessa fase?",
         opcoes: [
           {
             id: "pressao_expectativas",
             label: "Expectativas",
-            description: "Cobranças, comparações e sensação de nunca ser suficiente."
+            description: "A sensação de que todo mundo chegou lá... menos você."
           },
           {
             id: "duvidas_futuro",
-            label: "Dúvidas sobre o futuro",
-            description: "Incertezas sobre caminho, trabalho e decisões."
+            label: "Não saber o caminho",
+            description: "A angústia de ainda não saber quem você vai ser ou onde vai chegar."
           },
           {
             id: "influencias_amizades",
-            label: "Influências e amizades",
-            description: "Dificuldade para manter convicções e limites."
+            label: "Pertencer sem se perder",
+            description: "Querer ser aceito sem abrir mão de quem você realmente é."
           }
         ]
       },
       passo2: {
-        pergunta: "O que você mais sente que precisa de Jesus neste momento?",
+        pergunta: "Se Jesus pudesse te dar uma coisa hoje — qual você escolheria?",
         opcoes: OPCOES_CUIDADO_PADRAO,
         porEscolha: {
           pressao_expectativas: {
@@ -70,31 +70,31 @@ document.addEventListener("DOMContentLoaded", () => {
             verseText:
               "Vinde a mim todos os que estais cansados e sobrecarregados, e eu vos aliviarei.",
             intro:
-              "Jesus conhece a pressão que pesa no seu coração e te chama para descanso real."
+              "A pressão que você sente hoje não é a voz de Deus. Em Jesus, você não precisa provar nada — você já tem valor."
           },
           duvidas_futuro: {
             verseRef: "Jeremias 29:11",
             verseText:
               "Eu é que sei os planos que tenho para vocês, diz o Senhor, planos de paz e não de mal.",
             intro:
-              "Mesmo com dúvidas, Deus não perdeu o controle da sua história."
+              "Você não precisa ter tudo resolvido para Deus agir. Ele já conhece cada capítulo da sua história — inclusive os que ainda não foram escritos."
           },
           influencias_amizades: {
             verseRef: "Provérbios 13:20",
             verseText: "Quem anda com os sábios será sábio.",
             intro:
-              "Jesus se importa com quem caminha com você e quer te dar discernimento."
+              "Você foi feito para pertencer — mas ao lugar certo. Jesus quer te dar sabedoria para escolher quem caminha com você."
           }
         }
       },
       final: {
         resumoFinal:
-          "Na juventude, Jesus te vê com amor e chama você para viver com identidade, verdade e esperança.",
+          "Você não chegou até aqui à toa. Jesus te viu antes de você O conhecer — e hoje Ele te chama pelo nome.",
         verseRef: "Romanos 15:13",
         verseText:
           "O Deus da esperança vos encha de todo o gozo e paz no vosso crer.",
         oracao:
-          "Jesus, eu te entrego esta fase da minha juventude. Guarda meu coração e firma meus passos em Ti. Amém."
+          "Jesus, eu não tenho todas as respostas — mas escolho Te dar meu coração hoje. Guarda quem eu estou me tornando. Firma meus passos no Teu caminho. Amém."
       }
     },
     adulto: {
@@ -103,28 +103,28 @@ document.addEventListener("DOMContentLoaded", () => {
         verseText:
           "Confia no Senhor de todo o teu coração e não te estribes no teu próprio entendimento.",
         intro:
-          "Em meio às responsabilidades da vida adulta, Deus segue presente e fiel.",
-        pergunta: "O que mais tem mexido com o seu coração nessa fase da vida adulta?",
+          "A vida adulta cobra demais e explica de menos. Mas existe alguém que carrega com você — e que nunca saiu do seu lado.",
+        pergunta: "O que tem pesado demais para você carregar sozinho?",
         opcoes: [
           {
             id: "cansaco_responsabilidades",
             label: "Cansaço e sobrecarga",
-            description: "Rotina pesada, mente cansada e pouca energia."
+            description: "A sensação de estar sempre devendo algo a alguém — e nunca tendo energia suficiente."
           },
           {
             id: "preocupacao_financeira",
-            label: "Preocupações financeiras",
-            description: "Insegurança com contas, trabalho e provisão."
+            label: "Incerteza financeira",
+            description: "A pressão de não saber se vai dar conta das contas e do futuro."
           },
           {
             id: "familia_relacionamentos",
-            label: "Família e relacionamentos",
-            description: "Conflitos, tensão ou falta de diálogo."
+            label: "Tensão em casa",
+            description: "Conflitos que cansam, silêncios que doem e distâncias que crescem."
           }
         ]
       },
       passo2: {
-        pergunta: "O que você mais sente que precisa de Jesus neste momento?",
+        pergunta: "Se Jesus pudesse te dar uma coisa hoje — qual você escolheria?",
         opcoes: OPCOES_CUIDADO_PADRAO,
         porEscolha: {
           cansaco_responsabilidades: {
@@ -132,32 +132,32 @@ document.addEventListener("DOMContentLoaded", () => {
             verseText:
               "Vinde a mim todos os que estais cansados e sobrecarregados, e eu vos aliviarei.",
             intro:
-              "Jesus conhece seu cansaço e oferece descanso para a alma."
+              "Você não foi feito para carregar o mundo. Jesus te chama para um descanso que não é fraqueza — é sabedoria."
           },
           preocupacao_financeira: {
             verseRef: "Mateus 6:33",
             verseText:
               "Buscai, pois, em primeiro lugar, o seu reino e a sua justiça, e todas estas coisas vos serão acrescentadas.",
             intro:
-              "Deus cuida de você também na área financeira e traz direção para cada dia."
+              "Deus vê a pressão que você sente com o dinheiro. Ele não ignora o concreto — e quer te dar direção para cada decisão."
           },
           familia_relacionamentos: {
             verseRef: "Colossenses 3:13",
             verseText:
               "Assim como o Senhor vos perdoou, assim também perdoai vós.",
             intro:
-              "Jesus pode restaurar vínculos e trazer graça para sua casa."
+              "O amor que restaura vidas não começa nos sentimentos — começa em Jesus. E Ele pode transformar o que parece sem saída na sua família."
           }
         }
       },
       final: {
         resumoFinal:
-          "Na vida adulta, Jesus não ignora suas cargas. Ele te acolhe, sustenta e conduz com sabedoria.",
+          "Você tem carregado muito. Hoje, Jesus te convida a soltar o peso que não era pra ser seu — e seguir com Ele.",
         verseRef: "Salmos 55:22",
         verseText:
           "Lança o teu cuidado sobre o Senhor, e ele te susterá.",
         oracao:
-          "Jesus, eu te entrego esta fase da minha vida adulta. Dá-me sabedoria, descanso e direção para cuidar do que colocaste em minhas mãos. Amém."
+          "Jesus, eu estou cansado(a) de tentar sozinho(a). Hoje eu Te entrego o que está pesado. Dá-me sabedoria para o que é meu — e coragem para soltar o que não é. Amém."
       }
     },
     melhor_idade: {
@@ -166,28 +166,28 @@ document.addEventListener("DOMContentLoaded", () => {
         verseText:
           "Até à vossa velhice, eu serei o mesmo e ainda até às cãs eu vos carregarei.",
         intro:
-          "Sua história é preciosa para Deus. Ele permanece fiel em cada estação da vida.",
-        pergunta: "O que mais tem tocado o seu coração nessa fase da melhor idade?",
+          "A sua história não acabou. Cada estação da vida tem um propósito — e Deus ainda tem muito para escrever com você.",
+        pergunta: "O que mais tem ocupado o seu coração nesse tempo da vida?",
         opcoes: [
           {
             id: "saude",
             label: "Saúde e limitações",
-            description: "Fragilidade, tratamento ou preocupação com o corpo."
+            description: "A dor de sentir o corpo mudar e o medo do que vem pela frente."
           },
           {
             id: "solidao_saudades",
-            label: "Solidão e saudades",
-            description: "Sentimento de vazio, ausência e distância."
+            label: "Solidão e memórias",
+            description: "A saudade de quem já não está — e o silêncio que dói mais do que parece."
           },
           {
             id: "preocupacao_familia",
             label: "Preocupação com a família",
-            description: "Cuidado com filhos, netos e o futuro da casa."
+            description: "O desejo de que seus filhos e netos estejam bem — mesmo que você não possa controlar tudo."
           }
         ]
       },
       passo2: {
-        pergunta: "O que você mais sente que precisa de Jesus neste momento?",
+        pergunta: "Se Jesus pudesse te dar uma coisa hoje — qual você escolheria?",
         opcoes: OPCOES_CUIDADO_PADRAO,
         porEscolha: {
           saude: {
@@ -195,31 +195,31 @@ document.addEventListener("DOMContentLoaded", () => {
             verseText:
               "O Senhor o assiste no leito da enfermidade.",
             intro:
-              "Jesus vê sua dor com compaixão e permanece ao seu lado."
+              "Deus não desvia o olhar da sua dor. Cada limitação que você sente — Ele já está lá, do seu lado."
           },
           solidao_saudades: {
             verseRef: "Deuteronômio 31:8",
             verseText:
               "O Senhor é quem vai adiante de ti; não te deixará, nem te desamparará.",
             intro:
-              "Mesmo na solidão, você não está abandonado. Deus continua perto."
+              "A solidão mente quando diz que você está esquecido. Deus lembra de você com ternura — e nunca te abandonou."
           },
           preocupacao_familia: {
             verseRef: "Josué 24:15",
             verseText: "Eu e a minha casa serviremos ao Senhor.",
             intro:
-              "Jesus recebe suas orações pela família e age além do que seus olhos veem."
+              "As suas orações por quem você ama chegam mais longe do que seus braços alcançam. Deus ouve — e age."
           }
         }
       },
       final: {
         resumoFinal:
-          "Na melhor idade, Jesus continua cuidando de você com ternura, dignidade e propósito.",
+          "Você não chegou até aqui por acidente. Jesus caminhou com você até aqui — e não vai parar agora.",
         verseRef: "Salmos 92:14",
         verseText:
           "Na velhice darão ainda frutos, serão cheios de seiva e de verdor.",
         oracao:
-          "Jesus, eu te entrego esta fase da minha melhor idade. Sustenta meu coração com paz, força e esperança renovada. Amém."
+          "Jesus, a minha vida está nas Tuas mãos — e isso é o melhor lugar que ela poderia estar. Sustenta meu coração com paz e renova a minha esperança a cada manhã. Amém."
       }
     }
   };
