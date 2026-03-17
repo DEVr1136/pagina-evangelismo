@@ -331,6 +331,16 @@ body {
   line-height: 1.6;
 }
 
+.pastor-video-wrap {
+  margin-top: 18px;
+}
+
+.pastor-video {
+  width: 100%;
+  border-radius: 12px;
+  display: block;
+}
+
 .final-banner-wrap {
   margin-top: 18px;
 }
