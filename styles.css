@@ -95,9 +95,17 @@ body {
 .progress-affirmation {
   margin: 10px 0 0;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 400;
   color: #214d35;
-  line-height: 1.5;
+  line-height: 1.6;
+}
+
+.affirmation-highlight {
+  display: block;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #1a5c38;
+  margin-bottom: 6px;
 }
 
 .step {
@@ -160,13 +168,23 @@ body {
 }
 
 .choice-card {
-  text-align: left;
-  border: 1px solid var(--border);
+  text-align: center;
+  border: 2px solid var(--border);
   border-radius: 14px;
   background: var(--surface);
-  padding: 14px;
+  padding: 20px 10px;
   cursor: pointer;
-  transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+  transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease, background 160ms ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.choice-card::after {
+  content: "👆";
+  display: block;
+  font-size: 1rem;
+  margin-top: 8px;
+  opacity: 0.5;
 }
 
 .choice-card:hover,
@@ -193,7 +211,8 @@ body {
 .choice-title {
   display: block;
   font-weight: 700;
-  margin-bottom: 6px;
+  font-size: 1.2rem;
+  margin-bottom: 0;
 }
 
 .choice-text {
