@@ -305,22 +305,9 @@ body {
 }
 
 .pilar-hint {
-  font-size: 1.1rem;
-  opacity: 1;
-  transition: opacity 300ms ease, transform 300ms ease;
+  font-size: 1rem;
+  opacity: 0.5;
   flex-shrink: 0;
-  animation: pilar-pulse 1.8s ease-in-out infinite;
-}
-
-@keyframes pilar-pulse {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50%       { opacity: 0.45; transform: scale(0.88); }
-}
-
-.pilar-card.pilar-expanded .pilar-hint {
-  opacity: 0;
-  transform: scale(0.6);
-  animation: none;
 }
 
 .pilar-texto {
