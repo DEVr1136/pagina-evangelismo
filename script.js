@@ -428,8 +428,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (elements.finalPilares && fluxo.final.pilares) {
       elements.finalPilares.innerHTML = fluxo.final.pilares.map((p) =>
-        `<div class="pilar-card"><h4 class="pilar-titulo">${p.titulo}</h4><p class="pilar-texto">${p.texto}</p></div>`
+        `<div class="pilar-card" role="button" tabindex="0" aria-expanded="false">
+          <div class="pilar-header">
+            <h4 class="pilar-titulo">${p.titulo}</h4>
+            <span class="pilar-hint" aria-hidden="true">✨</span>
+          </div>
+          <p class="pilar-texto">${p.texto}</p>
+        </div>`
       ).join("");
+
+      elements.finalPilares.querySelectorAll(".pilar-card").forEach((card) => {
+        const toggle = () => {
+          const expanded = card.classList.toggle("pilar-expanded");
+          card.setAttribute("aria-expanded", String(expanded));
+        };
+        card.addEventListener("click", toggle);
+        card.addEventListener("keydown", (e) => {
+          if (e.key === "Enter" || e.key === " ") { e.preventDefault(); toggle(); }
+        });
+      });
     }
 
     if (elements.finalIntro) {
