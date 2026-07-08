@@ -144,6 +144,11 @@ body {
   margin-bottom: 14px;
 }
 
+.welcome-question {
+  font-size: 1rem;
+  color: var(--text);
+}
+
 .step-context {
   border: 1px solid #d9cfbf;
   border-radius: 12px;
